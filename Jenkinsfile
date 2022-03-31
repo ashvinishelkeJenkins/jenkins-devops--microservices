@@ -2,33 +2,25 @@
 
 //Declarative
 
-pipeline 
-{
-	agent any
-		stages
-		{
-			stage('Build')
-				{
-					Steps
-					{
-					echo "Build"
-					}
-				}
-				stage('Test')
-				{
-					Steps
-					{
-					echo "Test"
-					}
-				}
-				stage('Integration Test')
-				{
-					Steps
-					{
-					echo "Integration Test"
-					}
-				}
-		}
+pipeline {
+    agent any 
+    stages {
+        stage('Build') { 
+            steps {
+                echo "build"
+            }
+        }
+        stage('Test') { 
+            steps {
+                echo "test" 
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                echo "Deploy" 
+            }
+        }
+    }
 }
 		
 
